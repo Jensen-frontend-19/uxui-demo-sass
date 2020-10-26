@@ -41,14 +41,18 @@ export default {
 
 $card-image-color: #e58f1a
 
+=default-margins($x)
+    padding: 0em + $x
+    margin: 0.4em
+
 main
     background-color: base.$primary-bg
 
 h1
-    color: base.$primary-fg
     // background-color: $primary-bg
-    padding: 0.4em
-    margin: 0.2em
+    +default-margins(0.4em)
+    color: base.$primary-fg
+    font-family: base.$heading-font-family
 
 main > p
     margin: 0px
@@ -60,16 +64,17 @@ main > p
 
 .card
     border: 1px solid base.$primary-fg
+    +default-margins(0em)
     padding: 0em
-    margin: 0.4em
 
     h2
         margin-top: 0px
         margin-bottom: 0px
         font-size: 1.2em
         padding: 0.2em
-        color: base.$primary-fg
         height: 2.5em
+        color: base.$primary-fg
+        font-family: base.$heading-font-family
 
     .image
         height: 10em
